@@ -1,45 +1,12 @@
-var layout = {
-  title: {
-    text:'Plot Title',
-    font: {
-      family: 'Courier New, monospace',
-      size: 24
-    },
-    xref: 'paper',
-    x: 0.05,
-  },
-  paper_bgcolor: "orange",
-  xaxis: {
-    title: {
-      text: 'x Axis Line',
-      font: {
-        family: 'Courier New, monospace',
-        size: 18,
-        color: '#7f7f7f'
-      }
-    },
-  },
-  yaxis: {
-    title: {
-      text: 'y Axis Line',
-      font: {
-        family: 'Courier New, monospace',
-        size: 18,
-        color: '#7f7f7f'
-      }
-    }
+var data = [
+  {
+    x: ['Blue', 'Cyan', 'Green', 'Yellow', 'Orange', 'Red', 'Deep Red'],
+    y: [31.92, 55.72, 45.16, 29.79, 24.75, 32.50, 49.25],
+    marker:{
+      color: ['rgba(37,41,236,1)', 'rgba(83,215,248,1)', 'rgba(0,255,0,1)', 'rgba(255,255,0,1)', 'rgba(255,165,0,1)', 'rgba(255,0,0,1)', 'rgba(141,7,4,0.75)']
+      },
+    type: 'bar',
   }
-};
+];
 
-TESTER = document.getElementById("tester");
-Plotly.newPlot(
-  TESTER,
-  [
-    {
-      x: ['red', 'green', 'orange', 'yellow', 'purple'],
-      y: [1, 2, 4, 8, 16],
-    type: 'bar'
-    }
-  ],
-  layout
-);
+Plotly.newPlot('data', data);
